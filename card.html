@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Store</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background-color: #f4f6f8;
+            color: #222;
+        }
+
+       
+        .navbar{
+            background-color: #17202a;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 50px;
+        }
+
+        .logo{
+            color: white;
+            font-size: 25px;
+        }
+
+        .logo span{
+            color: #f39c12;
+        }
+
+        .nav-links{
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .nav-links a{
+            text-decoration: none;
+            color: white;
+            font-size: 15px;
+        }
+
+        .nav-links a:hover{
+            color: #f39c12;
+        }
+
+        
+        .heading{
+            text-align: center;
+            margin: 35px 0 25px;
+        }
+
+        .heading h1{
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .heading p{
+            color: #666;
+            font-size: 14px;
+        }
+
+        
+        .products{
+            width: 90%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            padding-bottom: 40px;
+        }
+
+        
+        .card{
+            width: 280px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover{
+            transform: translateY(-4px);
+            box-shadow: 0 7px 15px rgba(0,0,0,0.12);
+        }
+
+        
+        .image-box{
+            height: 200px;
+            background-color: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-box img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        
+        .content{
+            padding: 17px;
+        }
+
+        .category{
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 6px;
+        }
+
+        .content h2{
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        .description{
+            color: #666;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .bottom{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .price{
+            font-size: 19px;
+            font-weight: bold;
+            color: #17202a;
+        }
+
+        .btn{
+            border: none;
+            background-color: #f39c12;
+            color: white;
+            padding: 9px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .btn:hover{
+            background-color: #d68910;
+        }
+
+        @media(max-width: 650px){
+
+            .navbar{
+                padding: 0 20px;
+            }
+
+            .nav-links{
+                gap: 12px;
+            }
+
+            .products{
+                width: 95%;
+            }
+
+            .card{
+                width: 100%;
+                max-width: 320px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    
+    <nav class="navbar">
+
+        <h2 class="logo">Tech<span>Store</span></h2>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+    </nav>
+
+
+    
+    <div class="heading">
+        <h1>Our Products</h1>
+        <p>Explore our latest collection of gadgets</p>
+    </div>
+
+
+   
+    <div class="products">
+
+       
+        <div class="card">
+
+            <div class="image-box">
+                <img src="https://static.vecteezy.com/system/resources/previews/024/558/897/original/blue-wireless-headphones-isolated-on-transparent-background-ai-generated-png.png"
+                     alt="Headphones">
+            </div>
+
+            <div class="content">
+
+                <p class="category">Audio</p>
+
+                <h2>Wireless Headphones</h2>
+
+                <p class="description">
+                    Comfortable wireless headphones with clear sound
+                    and long battery life.
+                </p>
+
+                <div class="bottom">
+                    <span class="price">₹999</span>
+                    <button class="btn">Buy Now</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+       
+        <div class="card">
+
+            <div class="image-box">
+                <img src="https://globalhealthcommunication.org/wp-content/uploads/2023/04/Rival-Smart-Watch-001.jpg"
+                     alt="Smart Watch">
+            </div>
+
+            <div class="content">
+
+                <p class="category">Wearables</p>
+
+                <h2>Smart Watch</h2>
+
+                <p class="description">
+                    Track your daily activities, notifications
+                    and fitness goals easily.
+                </p>
+
+                <div class="bottom">
+                    <span class="price">₹2,499</span>
+                    <button class="btn">Buy Now</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        
+        <div class="card">
+
+            <div class="image-box">
+                <img src="https://www.bassheadspeakers.com/wp-content/uploads/2018/09/Anker-SoundCore-Mini-Small-Bluetooth-Speaker.jpg"
+                     alt="Bluetooth Speaker">
+            </div>
+
+            <div class="content">
+
+                <p class="category">Entertainment</p>
+
+                <h2>Bluetooth Speaker</h2>
+
+                <p class="description">
+                    Compact speaker with powerful audio
+                    for your everyday entertainment.
+                </p>
+
+                <div class="bottom">
+                    <span class="price">₹1,499</span>
+                    <button class="btn">Buy Now</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+       
+        <div class="card">
+
+            <div class="image-box">
+                <img src="https://tse4.mm.bing.net/th/id/OIP.OPYJyJG4p5_ZjA7n0g5C7AHaHa?r=0&pid=Api&P=0&h=180"
+                     alt="Gaming Mouse">
+            </div>
+
+            <div class="content">
+
+                <p class="category">Gaming</p>
+
+                <h2>Gaming Mouse</h2>
+
+                <p class="description">
+                    Lightweight gaming mouse with accurate
+                    and responsive controls.
+                </p>
+
+                <div class="bottom">
+                    <span class="price">₹799</span>
+                    <button class="btn">Buy Now</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="image-box">
+                <img src="https://redragonshop.com/cdn/shop/products/WirelessMechanicalKeyboardforMac_1.png?v=1681107409"
+                     alt="Keyboard">
+            </div>
+
+            <div class="content">
+
+                <p class="category">Accessories</p>
+
+                <h2>Mechanical Keyboard</h2>
+
+                <p class="description">
+                    Durable mechanical keyboard suitable
+                    for gaming and daily work.
+                </p>
+
+                <div class="bottom">
+                    <span class="price">₹2,999</span>
+                    <button class="btn">Buy Now</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        
+        <div class="card">
+
+            <div class="image-box">
+                <img src="https://tse4.mm.bing.net/th/id/OIP.eIEGFc9txTTJHgUQJ7QvrgHaEK?r=0&pid=Api&P=0&h=180"
+                     alt="USB Hub">
+            </div>
+
+            <div class="content">
+
+                <p class="category">Accessories</p>
+
+                <h2>USB-C Hub</h2>
+
+                <p class="description">
+                    Connect multiple devices to your laptop
+                    using a single compact hub.
+                </p>
+
+                <div class="bottom">
+                    <span class="price">₹1,199</span>
+                    <button class="btn">Buy Now</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
