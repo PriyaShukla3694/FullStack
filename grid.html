@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container{
+
+    display:grid;
+
+    height:500px;
+
+    grid-template-columns:1fr 1fr 1fr;
+
+    grid-template-rows:100px 200px 100px;
+
+
+    grid-template-areas:
+
+    "box1 box1 box1"
+
+    "box2 box3 box4"
+
+    "box5 box5 box5";
+
+
+    gap:10px;
+}
+
+
+.box{
+
+    background:lightblue;
+
+    padding:20px;
+
+    font-size:25px;
+
+}
+
+
+
+
+.box1{
+    grid-area:box1;
+}
+
+.box2{
+    grid-area:box2;
+}
+
+.box3{
+    grid-area:box3;
+}
+
+.box4{
+    grid-area:box4;
+}
+
+.box5{
+    grid-area:box5;
+}
+@media(max-width:600px){
+
+    .container{
+
+        grid-template-columns:1fr;
+
+        grid-template-rows:auto;
+
+        grid-template-areas:
+
+        "box1"
+        "box2"
+        "box3"
+        "box4"
+        "box5";
+
+    }
+
+}
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="box box1">Box 1</div>
+    <div class="box box2">Box 2</div>
+    <div class="box box3">Box 3</div>
+    <div class="box box4">Box 4</div>
+    <div class="box box5">Box 5</div>
+
+</div>
+
+</body>
+</html>
