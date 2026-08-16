@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Flower</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+        }
+
+        .flower {
+            display: grid;
+            grid-template-columns: repeat(2, 120px);
+            grid-template-rows: repeat(2, 120px);
+            gap: 5px;
+            position: relative;
+        }
+
+        .petal {
+            background: linear-gradient(135deg, #ff7eb3, #ff758c);
+            transition: transform 0.3s ease;
+        }
+
+        .flower:hover.petal {
+            transform: scale(1.05);
+        }
+
+        .tl {
+            border-radius: 100% 100% 0 100%;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+        }
+
+        .tr {
+            border-radius: 100% 100% 100% 0;
+            background: linear-gradient(225deg, #ff758c, #ff7eb3);
+        }
+
+        .bl {
+            border-radius: 100% 0 100% 100%;
+            background: linear-gradient(45deg, #ff758c, #ff7eb3);
+        }
+
+        .br {
+            border-radius: 0 100% 100% 100%;
+            background: linear-gradient(315deg, #ff758c, #ff7eb3);
+        }
+
+        .center {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: radial-gradient(circle, #ffe600, #ffb300);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="flower">
+        <div class="petal tl"></div>
+        <div class="petal tr"></div>
+        <div class="petal bl"></div>
+        <div class="petal br"></div>
+        <div class="center"></div>
+    </div>
+
+</body>
+</html>
