@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section h2{
+            color: red;
+        }
+        section>h2{
+            text-transform: lowercase;
+        }
+
+        h2+p {
+            color: blue;
+        }
+        h2~p{
+            text-transform : uppercase;
+        }
+        h2{
+            color: purple;
+        }
+        #section-title{
+            color: green;
+        }
+        .section-title{
+            color: orange!important;
+
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h2 id="section-title" class="section-title">Section Title</h2>
+        <p>This is the content of the section.</p> 
+        <p>Para2</p>
+        <div>
+            <h2 class="section-title">Another Section Title</h2>
+        </div>
+    </section>
+</body>
+</html>

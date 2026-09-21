@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #element-selector{
+            color: blue;
+        }
+        .class-selector{
+            color: green;
+        }
+        #id-selector{
+            color: red;
+        }
+        input[type="email"]{
+            border: 2px solid blue;
+            color:red;
+            border-radius: 1
+            5px;
+        }
+        h2{
+            text-align: center;
+            color: purple;
+        }
+        div>p{
+            color: orange;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Selectors</h2>
+    <ul>
+        <li>Universal Selector</li>
+        <li id="element-selector">Element Selector</li>
+        <li class="class-selector">Class Selector</li>
+        <li id="id-selector">ID Selector</li>
+        <li class="class-selector">Combinator</li>
+        <li>Pseudo-elements</li>
+        <li>Pseudo-classes</li>
+    </ul>
+    <ul>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" >
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" >
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter your password" >
+    </ul>
+    <div>
+    <h3>Combinator</h3>
+    <p>para1</p>
+    <p>para2</p>
+    </div>
+</body>
+</html>
