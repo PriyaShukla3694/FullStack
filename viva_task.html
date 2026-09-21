@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowTask</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#f5f7ff;
+        }
+
+        .container{
+            width:90%;
+            max-width:1200px;
+            margin:auto;
+        }
+
+        /* Navbar */
+        nav{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:25px 0;
+        }
+
+        .logo{
+            font-size:24px;
+            font-weight:bold;
+            color:#4f46e5;
+        }
+
+        .nav-links{
+            display:flex;
+            gap:30px;
+        }
+
+        .nav-links a{
+            text-decoration:none;
+            color:#444;
+        }
+
+        .buttons{
+            display:flex;
+            gap:15px;
+        }
+
+        .btn{
+            padding:12px 24px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+        }
+
+        .btn-primary{
+            background:#4f46e5;
+            color:white;
+        }
+
+        .btn-outline{
+            background:white;
+            border:1px solid #4f46e5;
+            color:#4f46e5;
+        }
+
+        /* Hero Section */
+        .hero{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:50px;
+            padding:80px 0;
+        }
+
+        .hero-text{
+            flex:1;
+        }
+
+        .tag{
+            display:inline-block;
+            background:#e0e7ff;
+            color:#4f46e5;
+            padding:8px 15px;
+            border-radius:20px;
+            margin-bottom:20px;
+        }
+
+        .hero h1{
+            font-size:48px;
+            margin-bottom:20px;
+            color:#111827;
+        }
+
+        .hero p{
+            color:#6b7280;
+            line-height:1.6;
+            margin-bottom:30px;
+        }
+
+        .hero-buttons{
+            display:flex;
+            gap:15px;
+        }
+
+        /* Dashboard */
+        .dashboard{
+            flex:1;
+            background:white;
+            padding:30px;
+            border-radius:20px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .chart{
+            height:250px;
+            background:linear-gradient(to top, #dbeafe, white);
+            border-radius:15px;
+            position:relative;
+        }
+
+        .line{
+            position:absolute;
+            width:80%;
+            height:4px;
+            background:#4f46e5;
+            top:60%;
+            left:10%;
+            transform:rotate(-10deg);
+        }
+
+        /* Features */
+        .features{
+            padding:80px 0;
+            text-align:center;
+        }
+
+        .features h2{
+            font-size:36px;
+            margin-bottom:15px;
+        }
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:25px;
+            margin-top:40px;
+        }
+
+        .card{
+            background:white;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.08);
+            text-align:left;
+        }
+
+        .icon{
+            width:60px;
+            height:60px;
+            background:#eef2ff;
+            color:#4f46e5;
+            border-radius:50%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-size:25px;
+            margin-bottom:20px;
+        }
+
+        .card h3{
+            margin-bottom:15px;
+        }
+
+        .card p{
+            color:#6b7280;
+        }
+
+        /* Responsive */
+        @media(max-width:768px){
+
+            .hero{
+                flex-direction:column;
+                text-align:center;
+            }
+
+            .hero-buttons{
+                justify-content:center;
+            }
+
+            .cards{
+                grid-template-columns:1fr;
+            }
+
+            .nav-links{
+                display:none;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Navbar -->
+        <nav>
+            <div class="logo">FlowTask</div>
+
+            <div class="nav-links">
+                <a href="#">Features</a>
+                <a href="#">Pricing</a>
+                <a href="#">Docs</a>
+            </div>
+
+            <div class="buttons">
+                <button class="btn btn-outline">Login</button>
+                <button class="btn btn-primary">Get Started</button>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="hero">
+
+            <div class="hero-text">
+                <span class="tag">Work Smarter</span>
+
+                <h1>Build Better Products Faster With Our Platform</h1>
+
+                <p>
+                    Streamline your workflow, collaborate with your team
+                    and ship faster with our all-in-one platform.
+                </p>
+
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Get Started</button>
+                    <button class="btn btn-outline">View Demo</button>
+                </div>
+            </div>
+
+            <div class="dashboard">
+                <div class="chart">
+                    <div class="line"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+
+            <h2>Powerful Features</h2>
+            <p>Everything you need to build and grow your product.</p>
+
+            <div class="cards">
+
+                <div class="card">
+                    <div class="icon">⚡</div>
+                    <h3>Fast & Reliable</h3>
+                    <p>Experience blazing fast performance with 99.9% uptime.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">👥</div>
+                    <h3>Team Collaboration</h3>
+                    <p>Work together seamlessly with real-time updates.</p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">🛡</div>
+                    <h3>Secure by Design</h3>
+                    <p>Your data is protected with enterprise-grade security.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</body>
+</html>

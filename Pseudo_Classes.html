@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes</title>
+
+    <style>
+        button:hover{
+            background-color: black;
+            color:white;
+        }
+        button:active{
+            background-color: blue;
+            color: white;
+        }
+        button{
+            font-weight: 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        a:visited{
+            color: green;
+        }
+        input:checked{
+            accent-color: brown;
+            box-shadow: 1px 1px 5px black;
+        }
+        li:nth-child(3n){
+            background-color: yellow;
+        }
+        li:not(:hover){
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <button> Click Me</button>
+    <a href="#">Link</a>
+    <input type="checkbox"checked/>
+    <input type="checkbox"/>
+    <form>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+    </form>
+</body>
+</html>

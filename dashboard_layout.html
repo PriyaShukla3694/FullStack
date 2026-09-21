@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, serif;
+        }
+
+        body {
+            background: #f5f6f8;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .dashboard {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 210px;
+            background: white;
+            border-right: 1px solid #ddd;
+            padding: 25px 15px;
+            flex-shrink: 0;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 35px;
+            padding-left: 10px;
+        }
+
+        .menu a {
+            display: block;
+            text-decoration: none;
+            color: #555;
+            padding: 11px 12px;
+            margin-bottom: 5px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .menu a:hover,
+        .menu a.active {
+            background: #f0f0f0;
+            color: #111;
+        }
+
+        .main {
+            flex: 1;
+            padding: 20px 25px;
+            overflow: hidden;
+        }
+
+        .header {
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+        }
+
+        .header p {
+            font-size: 13px;
+            color: #777;
+            margin-top: 4px;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .profile-circle {
+            width: 35px;
+            height: 35px;
+            background: #ddd;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #e2e2e2;
+            border-radius: 8px;
+            padding: 18px;
+            height: 115px;
+        }
+
+        .card p {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 12px;
+        }
+
+        .card h2 {
+            font-size: 23px;
+            margin-bottom: 5px;
+        }
+
+        .card span {
+            font-size: 12px;
+            color: #777;
+        }
+
+        .orders-container {
+            background: white;
+            border: 1px solid #e2e2e2;
+            border-radius: 8px;
+            padding: 20px;
+            height: calc(100vh - 230px);
+        }
+
+        .orders-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .orders-header h2 {
+            font-size: 18px;
+        }
+
+        .orders-header button {
+            border: 1px solid #ddd;
+            background: white;
+            padding: 7px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        th {
+            text-align: left;
+            color: #777;
+            font-weight: normal;
+            padding: 12px 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        td {
+            padding: 14px 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .status {
+            padding: 5px 9px;
+            border-radius: 12px;
+            font-size: 11px;
+            background: #f1f1f1;
+        }
+
+        @media (max-width: 1000px) {
+            .sidebar {
+                width: 180px;
+            }
+
+            .main {
+                padding: 15px 18px;
+            }
+
+            .stats {
+                gap: 10px;
+            }
+
+            .card {
+                padding: 14px;
+            }
+        }
+
+        @media (max-width: 750px) {
+            body {
+                overflow: auto;
+            }
+
+            .dashboard {
+                height: auto;
+                min-height: 100vh;
+            }
+
+            .sidebar {
+                width: 160px;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .orders-container {
+                height: auto;
+            }
+
+            table {
+                min-width: 650px;
+            }
+
+            .orders-container {
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">MyStore</div>
+
+            <nav class="menu">
+                <a href="#" class="active">Dashboard</a>
+                <a href="#">Products</a>
+                <a href="#">Orders</a>
+                <a href="#">Customers</a>
+                <a href="#">Analytics</a>
+                <a href="#">Settings</a>
+                <a href="#">Logout</a>
+            </nav>
+        </aside>
+
+        <main class="main">
+            <header class="header">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Overview of your store</p>
+                </div>
+
+                <div class="profile">
+                    <span>Admin</span>
+                    <div class="profile-circle">A</div>
+                </div>
+            </header>
+
+            <section class="stats">
+
+                <div class="card">
+                    <p>Total Sales</p>
+                    <h2>₹24,580</h2>
+                    <span>+12.5% this month</span>
+                </div>
+
+                <div class="card">
+                    <p>Total Orders</p>
+                    <h2>1,248</h2>
+                    <span>+8.2% this month</span>
+                </div>
+
+                <div class="card">
+                    <p>Total Customers</p>
+                    <h2>856</h2>
+                    <span>+5.4% this month</span>
+                </div>
+
+                <div class="card">
+                    <p>Revenue</p>
+                    <h2>₹18,240</h2>
+                    <span>+10.8% this month</span>
+                </div>
+
+            </section>
+
+            <section class="orders-container">
+
+                <div class="orders-header">
+                    <h2>Recent Orders</h2>
+                </div>
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Product</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>#ORD-1024</td>
+                            <td>Rahul Sharma</td>
+                            <td>AirPods Pro</td>
+                            <td>02 Sep 2026</td>
+                            <td>₹19,999</td>
+                            <td><span class="status">Completed</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>#ORD-1023</td>
+                            <td>Ananya Singh</td>
+                            <td>Smart Watch</td>
+                            <td>02 Sep 2026</td>
+                            <td>₹8,499</td>
+                            <td><span class="status">Pending</span></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

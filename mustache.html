@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Realistic Hair Mustache</title>
+
+  <style>
+    body {
+      background: #f2dfc5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .mustache {
+      width: 420px;
+      height: 180px;
+      position: relative;
+    }
+
+    /* =========================
+       LEFT HALF
+       ========================= */
+
+    .mustache::before {
+      content: "";
+      position: absolute;
+
+      width: 205px;
+      height: 105px;
+
+      left: 5px;
+      top: 40px;
+
+      background:
+
+        /* individual hair strands */
+        repeating-linear-gradient(
+          103deg,
+          transparent 0px,
+          transparent 4px,
+          rgba(12, 7, 4, .95) 5px,
+          rgba(65, 35, 20, .9) 6px,
+          transparent 8px
+        ),
+
+        repeating-linear-gradient(
+          97deg,
+          transparent 0px,
+          transparent 7px,
+          rgba(100, 57, 32, .7) 8px,
+          rgba(20, 10, 6, .95) 10px,
+          transparent 12px
+        ),
+
+        /* natural hair highlights */
+        linear-gradient(
+          145deg,
+          #100905 10%,
+          #3a1e12 35%,
+          #0a0604 55%,
+          #4b2817 70%,
+          #090503 90%
+        );
+
+      border-radius:
+        90% 30% 70% 20%;
+
+      transform: rotate(12deg);
+
+      box-shadow:
+        3px 7px 10px rgba(0,0,0,.4),
+        inset -10px -8px 15px rgba(0,0,0,.65),
+        inset 8px 5px 10px rgba(105,60,35,.25);
+    }
+
+
+    /* =========================
+       RIGHT HALF
+       ========================= */
+
+    .mustache::after {
+      content: "";
+      position: absolute;
+
+      width: 205px;
+      height: 105px;
+
+      right: 5px;
+      top: 40px;
+
+      background:
+
+        /* individual hair strands */
+        repeating-linear-gradient(
+          77deg,
+          transparent 0px,
+          transparent 4px,
+          rgba(12, 7, 4, .95) 5px,
+          rgba(65, 35, 20, .9) 6px,
+          transparent 8px
+        ),
+
+        repeating-linear-gradient(
+          83deg,
+          transparent 0px,
+          transparent 7px,
+          rgba(100, 57, 32, .7) 8px,
+          rgba(20, 10, 6, .95) 10px,
+          transparent 12px
+        ),
+
+        /* natural hair shading */
+        linear-gradient(
+          215deg,
+          #100905 10%,
+          #3a1e12 35%,
+          #0a0604 55%,
+          #4b2817 70%,
+          #090503 90%
+        );
+
+      border-radius:
+        30% 90% 20% 70%;
+
+      transform: rotate(-12deg);
+
+      box-shadow:
+        -3px 7px 10px rgba(0,0,0,.4),
+        inset 10px -8px 15px rgba(0,0,0,.65),
+        inset -8px 5px 10px rgba(105,60,35,.25);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="mustache"></div>
+
+</body>
+</html> 

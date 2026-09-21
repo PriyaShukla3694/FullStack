@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #eeeeee;
+            padding: 20px;
+        }
+        .container {
+            height: 700px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 0.5fr 1fr;
+            grid-template-rows: 100px 150px 150px 200px;
+            grid-template-areas:
+                "box1 box1 box1 box1"
+                "box2 box3 box4 box5"
+                "box2 box6 box7 box8"
+                "box2 box9 box9 box10";
+            gap: 10px;
+        }
+
+        .box {
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .box1 {
+            grid-area: box1;
+            background-color: rgb(94, 156, 170);
+        }
+
+        .box2 {
+            grid-area: box2;
+            background-color: rgb(50, 151, 104);
+        }
+
+        .box3 {
+            grid-area: box3;
+            background-color: rgb(222, 245, 71);
+        }
+
+        .box4 {
+            grid-area: box4;
+            background-color: rgb(228, 228, 46);
+        }
+
+        .box5 {
+            grid-area: box5;
+            background-color: rgb(214, 235, 26);
+        }
+
+        .box6 {
+            grid-area: box6;
+            background-color: plum;
+        }
+
+        .box7 {
+            grid-area: box7;
+            background-color: lightseagreen;
+        }
+
+        .box8 {
+            grid-area: box8;
+            background-color: pink;
+        }
+
+        .box9 {
+            grid-area: box9;
+            background-color: skyblue;
+        }
+
+        .box10 {
+            grid-area: box10;
+            background-color: mediumpurple;
+        }
+        @media (max-width: 800px) {
+            .container {
+                height: auto;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 100px 150px 150px 150px 150px;
+                grid-template-areas:
+                    "box1 box1"
+                    "box2 box3"
+                    "box2 box4"
+                    "box5 box6"
+                    "box7 box8"
+                    "box9 box10";
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box1">Box 1</div>
+        <div class="box box2">Box 2</div>
+        <div class="box box3">Box 3</div>
+        <div class="box box4">Box 4</div>
+        <div class="box box5">Box 5</div>
+        <div class="box box6">Box 6</div>
+        <div class="box box7">Box 7</div>
+        <div class="box box8">Box 8</div>
+        <div class="box box9">Box 9</div>
+        <div class="box box10">Box 10</div>
+    </div>
+</body>
+</html>
+

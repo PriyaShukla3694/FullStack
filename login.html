@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -19,9 +16,6 @@
             font-family: Arial, sans-serif;
             background-color: #eef2f5;
         }
-
-
-        
 
         .navbar {
             height: 65px;
@@ -54,36 +48,22 @@
             color: #00adb5;
         }
 
-
-       
-
         .login-wrapper {
             min-height: calc(100vh - 65px);
-
             display: flex;
             justify-content: center;
             align-items: center;
-
             background-color: #eef2f5;
         }
 
-
-       
-
         .login-container {
             width: 330px;
-
             background-color: white;
-
             padding: 32px;
-
             border-radius: 12px;
-
             box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
-
             text-align: center;
         }
-
 
         .login-container h2 {
             margin-bottom: 8px;
@@ -94,23 +74,16 @@
             font-size: 13px;
             color: #777;
             margin-bottom: 22px;
-        }
-
-        
+            
+        }      
 
         .login-container input {
             width: 100%;
-
             padding: 11px;
-
             margin: 7px 0;
-
             border: 1px solid #d0d5d9;
-
             border-radius: 6px;
-
             outline: none;
-
             font-size: 14px;
         }
 
@@ -118,35 +91,21 @@
             border-color: #00adb5;
         }
 
-
-        
-
         .login-container button {
             width: 100%;
-
             padding: 11px;
-
             margin-top: 14px;
-
             background-color: #00adb5;
-
             color: white;
-
             border: none;
-
             border-radius: 6px;
-
             cursor: pointer;
-
             font-size: 15px;
         }
 
         .login-container button:hover {
             background-color: #008c93;
         }
-
-
-       
 
         .signup {
             margin-top: 18px;
@@ -162,8 +121,6 @@
         .signup a:hover {
             text-decoration: underline;
         }
-
-
 
         @media (max-width: 600px) {
 
@@ -187,83 +144,50 @@
 
     </style>
 </head>
-
-
 <body>
-
-
-
     <nav class="navbar">
-
         <div class="logo">
-            🔐 MyPage
+             MyPage
         </div>
-
         <ul class="nav-links">
-
             <li>
-                <a href="#">Home 🏠</a>
+                <a href="#">Home </a>
             </li>
-
             <li>
                 <a href="#">About</a>
             </li>
-
             <li>
                 <a href="#">Services</a>
             </li>
-
             <li>
-                <a href="#">Contact 📞</a>
+                <a href="#">Contact </a>
             </li>
-
         </ul>
-
-    </nav>
-
-
-    
+    </nav>    
 
     <div class="login-wrapper">
-
         <div class="login-container">
-
-            <h2>Welcome Back 👋</h2>
-
+            <h2>Welcome Back </h2>
             <p>Login to continue to your account</p>
-
-
             <form>
-
                 <input
                     type="text"
                     placeholder="Username"
-                    required
-                >
-
+                    required>
                 <input
                     type="password"
                     placeholder="Password"
-                    required
-                >
-
+                    required>
                 <button type="submit">
                     Login
                 </button>
-
             </form>
-
 
             <div class="signup">
                 Don't have an account?
                 <a href="#">Sign Up</a>
             </div>
-
         </div>
-
     </div>
-
-
 </body>
-
 </html>

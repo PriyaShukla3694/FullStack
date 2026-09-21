@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Web Page</title>
+        <style>
+            .container {
+                flex-direction: row;
+                outline: 3px solid black;
+                height: 90vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .container>div{
+                color: white;
+                width: 150px;
+                height: 100px;
+            }
+            #box1{
+                background-color: rgb(73, 178, 216);
+                flex-grow: 1;
+                flex-basis: 150px;
+            }
+            #box2{
+                background-color: rgb(218, 76, 76);
+                flex-grow: 1;
+                flex-basis: 150px;
+            }
+            #box3{
+                background-color: rgb(71, 71, 223);
+                flex-grow: 1;
+                flex-basis: 150px;
+            }
+            #box4{
+                background-color: rgb(76, 210, 76);
+                flex-grow: 2;
+                flex-basis: 150px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div id="box1">Box 1</div>
+            <div id="box2">Box 2</div>
+            <div id="box3">Box 3</div>
+            <div id="box4">Box 4</div>
+        </div>
+    </body>
+</html>
