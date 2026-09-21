@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+           
+        }
+        .percentage-icon{
+            width: 200px;
+            height: 200px;
+            background: conic-gradient(#4CAF50 0deg 270deg, #e0e0e0 270deg 360deg);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+           
+        }
+        .percentage-icon::before{
+            content: '';
+            width: 160px;
+            height: 160px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .percentage-text{
+            font-size: 48px;
+            font-weight: bold;
+            color: #4CAF50;
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="percentage-icon">
+        <div class="percentage-text">75%</div>
+    </div>
+</body>
+</html>

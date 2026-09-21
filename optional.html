@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:required{
+            border:2px solid red;
+            display:block;
+            margin-bottom:10px;
+        }
+        input:optional{
+            border:2px solid green;
+            display:block;
+            margin-bottom:10px;
+        }
+        input:enabled{
+            background-color:lightblue;
+        }
+        input:disabled{
+            background-color:lightgray;
+        }
+        input:valid{
+            background-color: bisque;
+
+        }
+        input:out-of-range{
+            background-color: pink;
+        }
+        input::placeholder{
+            color:black;
+        }
+        input::placeholder-shown{
+            outline:3px;
+
+        }
+        input:read-only{
+            border-width:0px;
+            box-shadow:0 0 0;
+            background:grey;
+            color:white;
+
+        }
+        input:focus{
+           background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" required placeholder="FirstName">
+        <input type="text" optional placeholder="MiddleName">
+        <input type="text" required placeholder="LastName">
+        <input type="text" disabled placeholder="Disabled">
+        <input type="email"valid placeholder ="Email">
+        <input type="number" min="10" max="100">
+        <input type="text" readonly placeholder="Read Only">
+        
+    </form>
+</body>
+</html>
